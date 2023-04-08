@@ -1,0 +1,41 @@
+<meta charset="UTF-8">
+
+<h1>Adivina adivinador :D</h1>
+
+<script>
+
+	function saltarLinea() {
+		document.write("<br>");
+		document.write("<br>");
+		document.write("<br>");
+	}
+
+	function imprimir(frase) {
+		document.write(frase);
+		saltarLinea();
+	}
+
+	function sorteo(n) {
+		var numeroAleatorio = Math.round(Math.random() * n);
+		return numeroAleatorio;
+	}
+
+	var n = parseInt(prompt("Ingrese un numero limite:"));
+	var numeroAleatorio = sorteo(n);
+
+
+	while (numeroAleatorio != numeroUsuario) {
+		var numeroUsuario = parseInt(prompt("¿Cual numero cree que es?"));
+		if (numeroAleatorio == numeroUsuario) {
+			imprimir("Has ganado :D");
+		}
+		else if (numeroAleatorio < numeroUsuario) {
+			alert("Es menor que el numero ingresado");
+		}
+		else {
+			alert("Es mayor que el numero ingresado");
+		}
+	}
+
+
+</script>

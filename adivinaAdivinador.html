@@ -1,0 +1,28 @@
+<meta charset="UTF-8">
+
+<h1>Adivina adivinador :D</h1>
+
+<script>
+
+	function saltarLinea() {
+		document.write("<br>");
+		document.write("<br>");
+		document.write("<br>");
+	}
+
+	function imprimir(frase) {
+		document.write(frase);
+		saltarLinea();
+	}
+
+	var numeroAleatorio = Math.round(Math.random() * 10);
+	var numeroUsuario = parseInt(prompt("Ingrese un numero del 0 al 10:"));
+
+	if (numeroAleatorio == numeroUsuario) {
+		imprimir("Has ganado :D");
+	}
+	else {
+		imprimir("Has perdido el numero era: " + numeroAleatorio);
+	}
+
+</script>

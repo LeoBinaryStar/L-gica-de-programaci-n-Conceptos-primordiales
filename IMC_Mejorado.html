@@ -1,0 +1,70 @@
+<meta charset="UTF-8">
+
+<h1>IMC 2</h1>
+
+<script>
+
+	function saltarLinea() {
+		document.write("<br>");
+		document.write("<br>");
+		document.write("<br>");
+	}
+
+	function imprimir(frase) {
+		document.write(frase);
+		saltarLinea();
+	}
+
+	/*
+	function calcularImc(peso, altura, nombre, peso2, altura2, nombre2) {
+		var imc = peso / (altura * altura);
+		var imc2 = peso2 / (altura2 * altura2);
+		var promedio = (imc + imc2) / 2;
+		imprimir("El imc de " + nombre + " con: " + peso + " y " + altura + " es: " + imc);
+		imprimir("El imc de " + nombre2 + " con: " + peso2 + " y " + altura2 + " es: " + imc2);
+		imprimir("El promedio de imc de " + nombre + " y " + nombre2 + " es: " + promedio);
+	}
+
+	function imc(pesox, alturax) {
+		imcx = pesox / (alturax * alturax);
+		return imcx;
+	}
+
+	//Promp pide al usuario que ingrese datos a tráves de un pop
+	var nombrex = prompt("Ingrese su nombre: ");
+	var pesox = prompt(nombrex + "Ingrese su peso");
+	var alturax = prompt(nombrex + "Ingrese su altura");
+	imc(pesox, alturax);
+	imprimir(imcx)
+
+	*/
+	function calcularImc(peso, altura, nombre) {
+		var imc = peso / (altura * altura);
+		imprimir("El imc de " + nombre + " con: " + peso + " y " + altura + " es: " + imc);
+
+		if (imc < 18.5) {
+			imprimir("Por debajo del imc recomendado")
+		}
+
+		if (imc > 18.5 && imc < 25) {
+			imprimir("Usted esta sano")
+		}
+
+		if (imc > 25 && imc < 30) {
+			imprimir("Usted esta en el rango de sobrepeso")
+		}
+
+		if (imc > 30) {
+			imprimir("Usted esta en el rango de obesidad")
+		}
+	}
+
+
+
+
+	var peso = parseFloat(prompt("Ingrese su peso"));
+	var altura = parseFloat(prompt("Ingrese su altura"));
+	var nombre = prompt("Ingrese su nombre");
+
+	calcularImc(peso, altura, nombre)
+</script>

@@ -1,0 +1,34 @@
+<meta charset="UTF-8">
+
+<h1>Calcular puntos de un equipo de futbol⚽</h1>
+
+<script>
+	function saltarLinea() {
+		document.write("<br>");
+		document.write("<br>");
+		document.write("<br>");
+	}
+
+	function imprimir(frase) {
+		document.write(frase);
+	}
+
+	var victorias = parseInt(prompt("Ingrese la cantidad de victorias:"));
+	var empates = parseInt(prompt("Ingrese la cantidad de empates:"));
+	var puntos = (victorias * 3) + (empates * 1);
+
+	imprimir("Los puntos totales del equipo son: " + puntos);
+
+	saltarLinea();
+	if (puntos > 28) {
+		imprimir("El equipo ha mejorado con respecto al año pasado :D");
+	}
+	if (puntos < 28) {
+		imprimir("El equipo ha empeorado con respecto al año pasado :c");
+	}
+	if (puntos == 28) {
+		imprimir("El equipo ha tenido el mismo rendimiento con respecto al año pasado :)");
+	}
+
+
+</script>
