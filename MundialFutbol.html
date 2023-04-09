@@ -1,0 +1,28 @@
+<meta charset="UTF-8">
+
+<h1>Mundial Fifa ⚽</h1>
+<br>
+<br>
+
+<script>
+
+	function saltarLinea() {
+		var saltoLinea = '<br><br>';
+		document.write(saltoLinea);
+	}
+
+	function imprimir(frase) {
+		document.write(frase);
+		saltarLinea();
+	}
+
+	var mundial = 1930
+	var añoLimite = parseInt(prompt("Ingrese el año limite:"))
+
+	while (mundial <= añoLimite) {
+		imprimir("Hubo mundial de la FIFA en el año: " + mundial)
+		mundial += 4;
+	}
+	alert("Los años del mundial de 1930 hasta " + añoLimite)
+
+</script>

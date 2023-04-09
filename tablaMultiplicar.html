@@ -1,0 +1,34 @@
+<meta charset="UTF-8">
+
+<h1>Tabla de multiplicar 🤓📚</h1>
+<br>
+<br>
+
+<script>
+
+	function saltarLinea() {
+		var saltoLinea = '<br><br>';
+		document.write(saltoLinea);
+	}
+
+	function imprimir(frase) {
+		document.write(frase);
+		saltarLinea();
+	}
+
+	var tabla = parseInt(prompt("Elija la tabla de multiplicar:"));
+	var contador = 0;
+
+	imprimir("Ciclo while")
+	while (contador <= 10) {
+		var resultado = tabla * contador;
+		imprimir(tabla + " por " + contador + " es: " + resultado);
+		contador++;
+	}
+
+	imprimir("Ciclo for")
+	for (var contador = 1; contador <= 10; contador++) {
+		var resultado = tabla * contador;
+		imprimir(tabla + " por " + contador + " es: " + resultado);
+	}
+</script>

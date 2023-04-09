@@ -1,0 +1,30 @@
+<meta charset="UTF-8">
+
+<h1>Promedio de edades</h1>
+<br>
+<br>
+
+<script>
+
+	function saltarLinea() {
+		var saltoLinea = '<br><br>';
+		document.write(saltoLinea);
+	}
+
+	function imprimir(frase) {
+		document.write(frase);
+		saltarLinea();
+	}
+
+	var edades = parseInt(prompt("Ingrese el numero de edades a ingresar:"));
+	var contador = 1;
+	var totalEdades = 0;
+
+	while (contador <= edades) {
+		var edadesDadas = parseInt(prompt("Ingrese el numero de edades a ingresar:"));
+		totalEdades += edadesDadas;
+		contador++;
+	}
+	var mediaEdades = (totalEdades / edades); imprimir("La media de las edades es: " + mediaEdades);
+
+</script>

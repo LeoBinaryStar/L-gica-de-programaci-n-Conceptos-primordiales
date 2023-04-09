@@ -1,0 +1,25 @@
+<meta charset="UTF-8">
+<h1>Números pares</h1>
+
+<script>
+	function imprimir(frase) {
+		document.write(frase);
+	}
+
+	function saltarLinea() {
+		document.write("<br>");
+	}
+
+	alert("Se imprimirán los números pares del 0 al 100");
+	contador = 0;
+	limite = 100;
+
+	while (contador <= limite) {
+		if ((contador % 2) == 0) {
+			imprimir(contador);
+			saltarLinea();
+		}
+		contador++;
+	}
+	imprimir("Fin :D");
+</script>

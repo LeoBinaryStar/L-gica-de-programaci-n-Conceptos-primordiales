@@ -1,0 +1,19 @@
+<meta charset="UTF-8">
+
+<button>Lista superheroes</button>
+
+<script>
+	var heroes = ["Superman", "Thor", "Batman", "Mujer Maravilla"];
+
+	function listar() {
+		//lenght tamaño de array
+		for (var i = 0; i < heroes.length; i++) {
+			alert(heroes[i]);
+		}
+	}
+
+	var button = document.querySelector("button");
+	button.onclick = listar;
+
+
+</script>
